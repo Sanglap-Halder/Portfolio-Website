@@ -1,0 +1,560 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000000;
+    --bgcol: #FFFFF0;
+    --btnbg: #FFD700;
+    --btnbghov: #B8860B;
+    --normaltext: #333333;
+    --links: #E0115F;
+    --bgshade: #B0C4DE;
+    --specialwords: #DC143C;
+    --highlights: #50C878;
+    --headings: #d2691e;
+    --logo: #8B0000;
+    --navitems: #6b482f;
+    --navitemshov: #8e4323;
+    --col1: #fff8d4;
+    --col2: #800020;
+    --col3: #fff4b8eb;
+    --col4: #7B3F00;
+    --col5: #FADA5E;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--linkcolor);
+}
+
+span {
+    color: var(--golden)
+}
+
+h1 {
+    font-size: 5rem;
+    color: var(--headings);
+}
+
+h2 {
+    font-size: 4rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: italic;
+    color: var(--headings);
+}
+
+h3 {
+    font-size: 3.3rem;
+    color: var(--headings);
+}
+
+h4 {
+    font-size: 2.7rem;
+    font-weight: 550;
+    color: var(--black);
+}
+
+a {
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--col1);
+}
+
+nav {
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5vw;
+    height: auto;
+    width: 100%;
+    padding: 1vw 8vw;
+}
+
+.logo>h3 {
+    color: var(--logo);
+}
+
+header>nav>ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+header>nav>ul>li {
+    padding: 1vw 1vw;
+    font-size: 2.5rem;
+}
+
+.navlinks>li>a {
+    color: var(--navitems);
+}
+
+header>nav>ul>li :hover {
+    text-decoration: underline;
+    color: var(--navitemshov);
+}
+
+.main {
+    font-size: 2rem;
+    color: var(--normaltext);
+    background: linear-gradient(90deg, #e6be8a6e, #FFFFF0, #e6be8a6e);
+    margin-top: 0;
+}
+
+section {
+    margin: 0vw 8vw;
+}
+
+.segment {
+    margin: 5vw 0vw;
+}
+
+#home {
+    display: flex;
+    gap: 20vw;
+    margin-top: 10rem;
+}
+
+.myDescription {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    gap: 3rem;
+}
+
+.image {
+    width: 25vw;
+    height: 25.5vw;
+    cursor: pointer;
+    border-radius: 5rem;
+    border: 0.3rem solid var(--col2);
+    transition: all 0.3s;
+}
+
+.image:hover {
+    transform: translateY(-1.3rem);
+}
+
+.image>img {
+    width: 25vw;
+    border-radius: 5rem;
+    border: 0.1rem solid var(--black);
+    position: relative;
+    left: 1.3rem;
+    bottom: 1rem;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.image>img:hover {
+    transform: translateY(2.3rem);
+}
+
+
+#home>.introduction>h1,
+h3 {
+    color: var(--black);
+}
+
+.introduction>h3>span {
+    color: var(--specialwords);
+}
+
+
+.accounts>a>img {
+    width: 3rem;
+    transition: all 0.3s;
+}
+
+.accounts>a>img:hover {
+    transform: translateY(-0.3rem);
+}
+
+
+.me a button {
+    width: 15vw;
+    height: 3vw;
+    text-align: center;
+    background-color: var(--btnbg);
+    border-color: var(--btnbg);
+    border-radius: 10vw;
+    color: var(--col2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.me :hover {
+    border-color: var(--btnbghov);
+    background: linear-gradient(0deg, var(--btnbghov), var(--btnbg));
+    border-radius: 10vw;
+    color: var(--black);
+    transform: translateY(-0.3rem);
+}
+
+#page1 {
+    margin-top: 15rem;
+    text-align: center;
+}
+
+.cv a button {
+    width: 15vw;
+    height: 3vw;
+    text-align: center;
+    background-color: var(--btnbg);
+    border-color: var(--btnbg);
+    border-radius: 10vw;
+    color: var(--col2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cv :hover {
+    background: linear-gradient(0deg, var(--btnbghov), var(--btnbg));
+    border-color: var(--btnbghov);
+    border-radius: 10vw;
+    color: var(--black);
+    transform: translateY(-0.3rem);
+}
+
+.education>h3 {
+    color: var(--headings);
+}
+
+.eduboxes {
+    display: flex;
+    gap: 3vw;
+}
+
+.edubox {
+    border-radius: 3rem;
+    border: 0.3rem solid var(--col2);
+    margin-top: 5rem;
+    padding: 5rem 3rem;
+    width: 50%;
+}
+
+#page2 {
+    margin-top: 15rem;
+}
+
+#page2>h2 {
+    text-align: center;
+}
+
+.skills {
+    display: flex;
+    gap: 5vw;
+    justify-items: center;
+    text-align: center;
+}
+
+.techskills {
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.techskills>h3 {
+    color: var(--headings);
+}
+
+.softskills {
+    margin-top: 3rem;
+    width: 50%;
+}
+
+.softskills>h3 {
+    color: var(--headings);
+}
+
+.skill {
+    width: 100%;
+    background-color: var(--bgshade);
+    border-radius: 3rem;
+}
+
+.skillname {
+    background-color: var(--col5);
+    border-radius: 3rem;
+    color: var(--black);
+    z-index: 10;
+    text-align: left;
+}
+
+#page3 {
+    margin-top: 15rem;
+}
+
+#page3>h2 {
+    text-align: center;
+}
+
+.projects {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1vw;
+    width: 100%;
+}
+
+.project {
+    position: relative;
+    width: 34%;
+    overflow: hidden;
+}
+
+.project>.description {
+    position: absolute;
+    padding: 3rem;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--col3);
+    cursor: pointer;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.project:hover .description {
+    opacity: 100;
+    top: 0;
+    z-index: 10;
+}
+
+.project>img {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 1px solid var(--col2);
+}
+
+#page4 {
+    margin-top: 15rem;
+    padding-bottom: 7vw;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background-color: var(--col3);
+    text-align: center;
+    border-radius: 1rem;
+    padding: 5vw 3vw;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+input {
+    background-color: #ffffff7c;
+    width: 90%;
+    border-color: #ffffff00;
+    border-radius: 0.3rem;
+    padding: 1vw;
+    margin: 0.5vw;
+}
+
+textarea {
+    background-color: #ffffff7c;
+    width: 90%;
+    height: 7vw;
+    border-color: #ffffff00;
+    border-radius: 0.3rem;
+    padding: 1vw;
+    margin: 0.5vw;
+    color: gray;
+}
+
+.container>button {
+    width: 15vw;
+    height: 3vw;
+    text-align: center;
+    background-color: var(--btnbg);
+    border-color: var(--btnbg);
+    border-radius: 10vw;
+    color: var(--col2);
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.container>button:hover {
+    transform: translateY(-0.3rem);
+}
+
+
+@media only screen and (max-width: 650px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 550;
+    }
+
+    header>nav>ul>li {
+        padding: 1vw 1vw;
+        font-size: 1.3rem;
+    }
+
+    .main {
+        font-size: 1rem;
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        margin-top: 5rem;
+    }
+
+    .myDescription {
+        gap: 1rem;
+    }
+
+    .image {
+        width: 80vw;
+        height: 80.5vw;
+    }
+
+    .image>img {
+        width: 80vw;
+    }
+
+    .accounts>a>img {
+        width: 2rem;
+    }
+
+    .me a button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+
+    #page1 {
+        margin-top: 7rem;
+    }
+
+    .cv a button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+    
+    .eduboxes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1vw;
+    }
+
+    .edubox {
+        margin-top: 1rem;
+        padding: 3rem 1rem;
+        width: 80%;
+    }
+    #page2 {
+        margin-top: 7rem;
+    }
+    
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .techskills {
+        margin-top: 1rem;
+        width: 80%;
+    }
+    
+    .softskills {
+        margin-top: 1rem;
+        width: 80%;
+    }
+    #page3 {
+        margin-top: 7rem;
+    }
+    
+    .projects {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .project {
+        width: 90%;
+    }
+    #page4 {
+        margin-top: 7rem;
+    }
+    
+    input {
+        padding: 2vw;
+        font-size: 1rem;
+    }
+    
+    textarea {
+        height: 20vw;
+        padding: 2vw;
+        font-size: 1rem;
+    }
+    
+    .container>button {
+        width: 15rem;
+        height: 3rem;
+        font-size: 1.2rem;
+    }
+}
